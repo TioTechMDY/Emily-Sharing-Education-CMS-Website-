@@ -1121,7 +1121,8 @@ a {
   margin-bottom: 2rem;
 }
 .facilities_component .card-wrapper {
-  margin-top: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 .facilities_component .row {
   justify-content: left;
