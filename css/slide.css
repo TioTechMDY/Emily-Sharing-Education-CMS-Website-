@@ -1,0 +1,237 @@
+/* Style for the photo slider container */
+
+.photo-slider {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+    /* Hide anything outside the slider */
+}
+
+
+/* Style for the slider container */
+
+.slider-container {
+    display: flex;
+    transition: transform 0.5s ease;
+    /* Ensure the items wrap nicely on smaller screens */
+    flex-wrap: nowrap;
+}
+
+
+/* Style for each photo frame */
+
+.photo-frame {
+    flex: 0 0 22%;
+    /* Each photo frame takes 22% of the container width on larger screens */
+    margin-right: 10px;
+    /* Space between photo frames */
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.photo-frame img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+}
+
+
+
+/* Style for the navigation buttons */
+
+.prev-btn,
+.next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 30px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+
+/* Optional: Style the navigation buttons on hover */
+
+.prev-btn:hover,
+.next-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* Mobile responsive adjustments */
+
+@media (max-width: 768px) {
+    .photo-frame {
+        flex: 0 0 48%;
+        /* 2 items per row */
+        margin-right: 4%;
+        /* Space between items */
+    }
+    /* Adjust the navigation button sizes for smaller screens */
+    .prev-btn,
+    .next-btn {
+        font-size: 24px;
+        padding: 8px;
+    }
+}
+
+
+/* Very small screen adjustment (e.g., for mobile phones) */
+
+@media (max-width: 480px) {
+    .photo-frame {
+        flex: 0 0 98%;
+        /* 1 item per row */
+        margin-right: 2%;
+        /* Adjust spacing */
+    }
+    /* Adjust navigation button size */
+    .prev-btn,
+    .next-btn {
+        font-size: 20px;
+        padding: 1px;
+        z-index: 50;
+        margin-left: 40px;
+        margin-right: 40px;
+        background-color: transparent;
+    }
+    .next-btn:hover {
+      background-color:transparent;
+  }
+  .prev-btn:hover {
+    background-color:transparent;
+}
+  
+}
+
+/*For IGCSE div */
+
+  
+.container_igcse {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px;
+    padding: 20px;
+    background-color: #000000;
+    color: white;
+    flex-wrap: wrap;
+    border-radius: 5px;
+    
+  }
+  .container_ged {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px;
+    padding: 20px;
+    background-color: #000000;
+    color: white;
+    flex-wrap: wrap;
+    border-radius: 5px;
+  }
+  
+  .content_igcse {
+    flex: 1 1 45%; /* Adjusts width proportionally */
+    max-width: 600px; /* Prevents the content from becoming too wide */
+    margin: 10px; /* Adds spacing between flex items */
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin: 0;
+  }
+  
+  h1 span {
+    color: #ffffff;
+  }
+  
+  .class-type-igcse {
+    margin: 20px 0;
+  }
+  
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  button.online, button.in-person, button.enroll {
+    background-color: #ffc107;
+    color: black;
+  }
+  
+  button.enroll {
+    padding: 15px 30px;
+    font-size: 1.5rem;
+  }
+  
+  p {
+    line-height: 1.8;
+    font-size: 1rem;
+  }
+  
+  .image-section {
+    flex: 1 1 45%; /* Adjusts width proportionally */
+    max-width: 400px;
+    text-align: center; /* Centers image horizontally */
+    margin: 10px;
+  }
+  
+  .image-section img {
+    max-width: 100%; /* Ensures the image doesn't exceed its container */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 5px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container_igcse {
+      flex-direction: column; /* Stacks content vertically on smaller screens */
+      align-items: center; /* Centers content */
+    }
+  
+    .content_igcse, .image-section {
+      flex: 1 1 100%; /* Makes each section take full width */
+      max-width: 100%; /* Removes width restriction */
+    }
+  
+    h1 {
+      font-size: 2rem; /* Adjusts font size for smaller screens */
+    }
+  
+    button {
+      padding: 8px 15px; /* Adjusts button size */
+      margin-right: 0; /* Removes margin between buttons on smaller screens */
+      margin-bottom: 10px; /* Adds spacing below buttons */
+      width: 100%; /* Makes buttons take full width */
+    }
+  
+    button.enroll {
+      font-size: 0.9rem; /* Reduces button font size */
+    }
+  
+    .class-type-igcse {
+      margin: 10px 0; /* Reduces margin for smaller screens */
+    }
+  }
+  
